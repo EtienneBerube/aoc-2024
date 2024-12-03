@@ -1,9 +1,7 @@
-Code.require_file("helpers/aoc_problem.ex")
-
-defmodule Day1 do
+defmodule Mix.Tasks.Aoc2024.Day1 do
   use Helpers.AocProblem
 
-  def run(file) do
+  def solve(file) do
     lines = file
     |> String.trim
     |> String.split("\n")
@@ -24,8 +22,6 @@ defmodule Day1 do
     |> Enum.map(fn {first, second} -> abs(first - second) end)
     |> Enum.sum
 
-    IO.puts(result)
+    result
   end
 end
-
-Day1.input

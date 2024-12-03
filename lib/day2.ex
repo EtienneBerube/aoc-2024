@@ -1,18 +1,7 @@
-defmodule Day1 do
+defmodule Mix.Tasks.Aoc2024.Day2 do
+  use Helpers.AocProblem
 
-  def input do
-    {:ok, file} = File.read("day2-input.txt")
-
-    IO.inspect(run(file))
-  end
-
-  def sample do
-    {:ok, file} = File.read("day2-sample.txt")
-
-    IO.puts(run(file))
-  end
-
-  def run(file) do
+  def solve(file) do
     lines = file
     |> String.trim
     |> String.split("\n")
@@ -41,5 +30,3 @@ defmodule Day1 do
     !!safe
   end
 end
-
-Day1.input
